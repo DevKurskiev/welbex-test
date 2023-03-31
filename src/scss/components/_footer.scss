@@ -1,0 +1,297 @@
+.footer {
+  padding: 124px 0 88px;
+  position: relative;
+  z-index: 2;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__company {
+    text-align: left;
+    margin-right: 98px;
+  }
+
+  &__company-items {
+    display: flex;
+    flex-direction: column;
+
+    a {
+      margin-bottom: 10px;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+      color: #e4e5ea;
+
+      &:hover {
+        opacity: .5;
+      }
+      
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__menu {
+    text-align: left;
+    flex: 1;
+  }
+
+  &__menu-wrapper {
+    display: flex;
+  }
+  
+  &__menu-left {
+    display: flex;
+    flex-direction: column;
+    margin-right: 52px;
+
+    a {
+      margin-bottom: 10px;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+      color: #e4e5ea;
+
+      &:hover {
+        opacity: .5;
+      }
+      
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__menu-right {
+    display: flex;
+    flex-direction: column;
+    
+    a {
+      margin-bottom: 10px;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+      color: #e4e5ea;
+
+      &:hover {
+        opacity: .5;
+      }
+
+      &:first-child {
+        display: none;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  
+  &__contacts {
+    text-align: right;
+  }
+
+  &__contacts-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    a {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+
+      &:hover {
+        opacity: .5;
+      }
+    }
+  }
+
+  &__contacts-viber {
+    font-weight: 500 !important;
+  }
+
+  &__icons {
+    display: flex;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: flex-end;
+
+    a {
+      margin-right: 14px;
+
+      &:hover {
+        opacity: .5;
+      }
+    }
+
+    a + :last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #656566;
+  }
+
+  &__regulations {
+    position: absolute;
+    right: 0;
+    bottom: 20px;
+    width: 240px;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 19px;
+    text-align: right;
+    color: #e4e5ea;
+    
+    a {
+      text-decoration-line: underline;
+      letter-spacing: 1px;
+
+      &:hover {
+        opacity: .5;
+      }
+    }
+  }
+
+}
+
+
+// Адаптив до 1024px
+@media (max-width: 1024px) {
+  .footer {
+    &__company {
+      margin-right: 10px;
+    }
+  }
+}
+
+// Адаптив до 768px
+@media (max-width: 768px) {
+  .footer {
+    padding: 45px 0 60px;
+
+    &__wrapper {
+      flex-direction: column;
+    }
+
+    &__company {
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
+
+    &__company-items {
+      a {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+      }
+    }
+
+    &__menu-wrapper {
+      margin-bottom: 27px;
+      justify-content: space-between;
+    }
+
+    &__menu-left {
+      margin-right: 0;
+
+      a {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        
+        &:first-child {
+          width: 75px;
+        }
+      }
+    }
+
+    &__menu-right {
+      max-width: 111px;
+      margin-right: 30px;
+
+      a {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+
+        &:first-child {
+          display: flex;
+        }
+        &:nth-child(3) {
+          display: none;
+        }
+      }
+    }
+
+    &__contacts {
+      text-align: left;
+      margin-bottom: 30px;
+    }
+
+    &__contacts-wrapper {
+      a {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+      }
+    }
+
+    &__contacts-viber {
+      font-size: 16px !important;
+      line-height: 19px !important;
+    }
+
+    &__icons {
+      justify-content: flex-start;
+      margin-bottom: 10px;
+      margin-top: 8px;
+
+      a {
+        img {
+          width: 20px;
+        }
+      }
+    }
+
+    &__title {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 17px;
+      letter-spacing: -1px;
+      text-transform: uppercase;
+    }
+
+    &__regulations {
+      bottom: 4px;
+      text-align: left;
+      left: 0;
+    }
+
+  }
+}

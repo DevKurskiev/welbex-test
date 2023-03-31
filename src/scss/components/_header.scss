@@ -1,0 +1,189 @@
+.header {
+  position: relative;
+  padding: 57px 0 127px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  &__logo {
+    width: 140px;
+    height: 24px;
+    margin-right: 54px;
+  }
+
+  &__description {
+    left: 0;
+    bottom: 93px;
+    position: absolute;
+    width: 165px;
+    height: 24px;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 12px;
+    color: #e4e5ea;
+  }
+
+  &__navbar {
+    position: relative;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #e4e5ea;
+
+    a {
+      z-index: 3;
+      margin-right: 30px;
+
+      &:hover {
+        opacity: .5;
+      }
+    }
+  }
+
+  &__contacts {
+    z-index: 3;
+    display: flex;
+    align-items: center;
+
+    a {
+      margin-right: 35px;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 19px;
+      color: #e4e5ea;
+
+      &:hover {
+        opacity: .5;
+      }
+
+      &:first-child {
+        margin-right: 47px;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__purple-ball {
+    z-index: -1;
+    position: absolute;
+    top: -73px;
+    right: 31px;
+    backdrop-filter: blur(2px);
+  }
+
+  &__red-ball {
+    z-index: -1;
+    position: absolute;
+    left: 161px;
+    top: 11px;
+    backdrop-filter: blur(2px);
+  }
+
+  &__purple-light {
+    position: absolute;
+    z-index: -1;
+    top: -65px;
+    left: -150px;
+  }
+}
+
+
+// Адаптив до 1280px
+@media (max-width: 1280px) {
+  .header{
+    &__navbar {
+      a {
+        margin-right: 15px;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+
+    &__contacts {
+      a {
+        margin-right: 15px;
+
+        &:first-child {
+          margin-right: 20px;
+        }
+      }
+    }
+
+    &__purple-light {
+      width: 580px;
+      left: 110px;
+    }
+
+  }
+}
+
+// Адаптив до 1024px
+@media (max-width: 1024px) {
+  .header{
+    &__logo {
+      margin-right: 25px;
+    }
+
+    &__contacts {
+      a {
+        &:first-child {
+          display: none;
+        }
+      }
+    }
+
+    &__purple-light {
+      width: 400px;
+      top: -100px;
+    }
+
+  }
+}
+
+// Адаптив до 768px
+@media (max-width: 768px) {
+  .header {
+    padding: 20px 0;
+    z-index: 33;
+
+    &__logo,
+    &__description,
+    &__contacts,
+    &__purple-ball,
+    &__red-ball,
+    &__purple-light {
+      display: none;
+    }
+
+    &__navbar {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 15px;
+      text-transform: uppercase;
+      justify-content: space-between;
+
+      a {
+        margin-right: 0px;
+
+        &:last-child {
+          display: none;
+        }
+      }
+    }
+  }
+}
